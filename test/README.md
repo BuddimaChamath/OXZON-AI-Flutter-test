@@ -2,24 +2,24 @@
 
 A full-stack Employee Management System built with Flutter and Firebase Firestore for OXZON AI internship assessment.
 
-## ✨ Features Implemented
+##  Features Implemented
 
 ### Core Features
-- ➕ **Add Employee**: Create new employee records with name, email, phone, department, role, and joining date
-- 📋 **View Employees**: Display all employees in a clean table/list view
-- ✏️ **Edit Employee**: Update existing employee details
-- 🗑️ **Delete Employee**: Remove employee records with confirmation dialog
+-  **Add Employee**: Create new employee records with name, email, phone, department, role, and joining date
+-  **View Employees**: Display all employees in a clean table/list view
+-  **Edit Employee**: Update existing employee details
+-  **Delete Employee**: Remove employee records with confirmation dialog
 
 ### Bonus Features (Implemented)
-- 🔍 **Search**: Real-time search employees by name with live filtering
-- 🎯 **Advanced Filters**: Filter by department, role, and joining date range
-- 🔄 **Sort Options**: Sort by name, joining date, and department
-- 📱 **Professional UI**: Clean, modern interface with avatar initials and experience calculation
-- 🏷️ **Employee Details**: Comprehensive employee profile with contact, work, and system information
-- 📊 **Smart Data Display**: Shows experience years, creation/update timestamps
-- 🎨 **Visual Elements**: Color-coded avatar circles and intuitive icons
-- 📋 **Empty State**: Helpful empty state when no employees exist
-- ✅ **Success Feedback**: Toast notifications for successful operations
+-  **Search**: Real-time search employees by name with live filtering
+-  **Advanced Filters**: Filter by department, role, and joining date range
+-  **Sort Options**: Sort by name, joining date, and department
+-  **Professional UI**: Clean, modern interface with avatar initials and experience calculation
+-  **Employee Details**: Comprehensive employee profile with contact, work, and system information
+-  **Smart Data Display**: Shows experience years, creation/update timestamps
+-  **Visual Elements**: Color-coded avatar circles and intuitive icons
+-  **Empty State**: Helpful empty state when no employees exist
+-  **Success Feedback**: Toast notifications for successful operations
 
 ##  Technology Stack
 
@@ -119,7 +119,7 @@ employee_management_system/
    ```
 
 
-## 🎯 Key Features Walkthrough
+##  Key Features Walkthrough
 
 ### Adding an Employee
 1. Tap the "Add Employee" floating action button
