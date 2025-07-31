@@ -118,6 +118,47 @@ employee_management_system/
    flutter run --release
    ```
 
+## Firebase Firestore Security Rules
+Below are the Firestore rules used in this project. These allow public access with strict data validation, suitable for development and internship assessment.
+
+   ```bash
+   rules_version = '2';
+   service cloud.firestore {
+   match /databases/{database}/documents {
+
+      // Employee collection rules
+      match /employees/{employeeId} {
+         // Allow public read access
+         allow read: if true;
+
+         // Allow create and update only if data is valid
+         allow create: if validateEmployeeData(request.resource.data);
+         allow update: if validateEmployeeData(request.resource.data);
+
+         // Allow deletion without restriction (use with caution)
+         allow delete: if true;
+      }
+
+      // Helper function to validate employee data structure
+      function validateEmployeeData(data) {
+         return data.keys().hasAll(['name', 'email', 'phone', 'department', 'role', 'joiningDate']) &&
+               data.name is string && data.name.size() > 0 &&
+               data.email is string && data.email.size() > 0 &&
+               data.phone is string && data.phone.size() > 0 &&
+               data.department is string && data.department.size() > 0 &&
+               data.role is string && data.role.size() > 0 &&
+               data.joiningDate is timestamp &&
+               data.email.matches('.*@.*\\..*') &&
+               data.keys().hasOnly(['id', 'name', 'email', 'phone', 'department', 'role', 'joiningDate', 'createdAt', 'updatedAt']);
+      }
+
+      // Deny all access to other collections
+      match /{document=**} {
+         allow read, write: if false;
+      }
+   }
+   }
+   ```
 
 ##  Key Features Walkthrough
 
